@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 10;
+    height: 100vh;
+    display: flex;
+    background-color: rgb(118, 255, 225);
+    align-items: center;
+    justify-items: center;
+    font-family: "Barriecito", system-ui;
+
+    transition: background-color 0.5s;
+}
+
+
+.poem{
+    position: fixed;
+    bottom: 10%;
+    right: 120px;
+    width: auto;
+    height: auto;
+    background-color: rgba(197, 255, 242, 0.502);
+    border: 7px solid rgba(0, 251, 255, 0.358);
+    border-radius: 50px;
+  font-family: "Overpass Mono", monospace;
+    padding: 20px;
+    line-height: 40px;
+    z-index: 0;
+}
+
+
+#overlay {
+position: relative;
+top: -30%;
+  /* font-family: "Barriecito", system-ui; */
+  font-weight: 400;
+  font-style: normal;
+  margin: 10%;
+  font-size: 60px;
+  z-index: 4;
+
+}
+
+#blob{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at 30% 30%, #7fffd4, #1e90ff);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    overflow: hidden;
+
+
+    --scale: 1; /*how the blob scales code reference: https://codepen.io/wesbos/pen/gPZBZQ?utm_source=chatgpt.com*/ 
+
+    animation: morph 3s linear infinite; /* animation reference: https://codepen.io/karisabinemalmin/pen/exjeym*/
+}
+
+
+@keyframes morph{
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    transform: scale(var(--scale));
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    transform: scale(var(--scale));
+
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: scale(var(--scale));
+
+  }
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+.light{
+    font-weight: lighter;
+    font-style: italic;
+    font-size: smaller;
+}
+
+.shrink{
+    font-family: "Micro 5", sans-serif;
+    color: hotpink;
+    background-color: blue;
+    font-size: 40px;
+}
+
+.grow{
+    font-family: "Sigmar One", sans-serif;
+    color: rgb(30, 49, 255);
+    font-size: 150px;
+    font-variant: small-caps;
+    font-weight: bold;
+    background-color: #a9ff5e;
+}
+
+.sleep{
+    font-family: "Cookie", cursive;
+    color: rgb(137, 122, 222);
+    background-color: rgb(0, 42, 156);
+    font-size: 100px;
+}
+
+.sleep2{
+    background-color: rgb(60, 75, 115);
+}
+
+.wake{
+  font-family: "Sue Ellen Francisco", cursive;
+    background-color: rgb(255, 198, 118);
+    font-size: 100px;
+    color: #a9ff5e;
+}
+
+.wake2{
+    background-color: rgb(118, 255, 225);
+}
+
+.blush{
+  font-family: "Gorditas", serif;
+    color: rgb(253, 184, 255);
+    background-color: #ff5e91;
+    font-size: 80px;
+}
+
+.happy{
+    font-family: "Ribeye", serif;
+    color: rgb(255, 247, 1);
+    background-color: #e2b900;
+    font-size: 100px;
+}
+
+.rainbow{
+    font-family: "Henny Penny", system-ui;
+    color: rgb(203, 255, 31);
+    background-color: #ff5e91;
+    font-size: 100px;
+}
+
+.lilac{
+    font-family: "Petit Formal Script", cursive;
+    color: rgb(87, 31, 255);
+    background-color: #dc5eff;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+
