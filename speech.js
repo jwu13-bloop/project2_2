@@ -23,6 +23,7 @@ recognition.onresult = function (event) {
 
     //declare constants and set variable
     // /keyword/=text it is searching for, i = case insensitive, returns true if found//
+    // follow this format: const hasKeyword = /keyword/i.test(transcript)
 
     const hasGrow = /grow/i.test(transcript);
     const hasShrink = /shrink/i.test(transcript);
